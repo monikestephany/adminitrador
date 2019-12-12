@@ -1,0 +1,57 @@
+/* CSS com especificações para IE7 e 6  */
+
+
+.formField {
+    min-height: 0;    
+}
+
+.breadcrumb-item {
+    *float: left;
+    *margin-right: 10px;
+}
+
+.shortcut-item {
+    *float: left;
+}
+
+.selectOpm,
+.selectPrelecao,
+.selectHorarioEquipe,
+.selectPolicial,
+.selectFuncao,
+.selectViatura,
+.selectEscalaExtra,
+.selectHorarioEquipe {
+    *height: 29px;
+}
+
+.tabelaPadrao td {
+    *padding: 3px 0;
+}
+.tabelaPadrao .formField {
+    *height: 30px;
+    *line-height: 30px;
+    *padding: 0;
+    *width: 90%;
+}
+
+.benefits-box .paginacao .record {
+    *height: 20px;
+}
+
+.generate-scale-box .lblDataFinal,
+.generate-scale-box .btnPesquisar {
+    *margin-left: 45px;
+}
+
+.dayoff-extra-scale-box .lblNome {
+    *width: 486px;
+}
+.dayoff-extra-scale-box .lblNome,
+.dayoff-extra-scale-box .btnPesquisar {
+    *margin-left: 40px;
+}
+
+.main-menu .main-menu-button.even {
+    background-color: #3382AA;
+}

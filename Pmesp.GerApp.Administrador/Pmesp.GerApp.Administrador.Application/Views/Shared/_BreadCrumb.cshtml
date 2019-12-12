@@ -1,0 +1,16 @@
+﻿@model BreadCrumbViewModel
+    <div class="bread">
+        <span>Home</span>
+    </div>
+<script>
+     $(document).ready(function () {
+         if(@Model.Caminhos != null) {
+             model.forEach(function (item) {
+                $('.bread').append('<span>'+item+'</span>');
+             });
+
+         $('.bread').append('<span>Home</span>');
+
+         }
+    });
+</script>

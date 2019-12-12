@@ -1,0 +1,90 @@
+﻿@model IEnumerable<MenuViewModel>
+
+<button class="openMenu">|||</button>
+<button class="changeMenuView">
+    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+        <path fill="#FFF" d="M16,5V18H21V5M4,18H9V5H4M10,18H15V5H10V18Z" />
+    </svg>
+</button>
+<ul>
+    <li>
+        <h2>Sistemas</h2>
+
+    </li>
+
+    @foreach (var item in Model.Where(p => p.Posicao == 1))
+    {
+        <li class="hasSub">
+
+            <button id="@item.Id">@item.Nome</button>
+
+            <ul>
+                @foreach (var sub in Model.Where(p => p.Posicao == 2))
+                {
+                    <li class="hasSub">
+                        @if (item.Id == sub.Pai)
+                        {
+                            <button id="@sub.Id">@sub.Nome</button>
+                        }
+                        @foreach (var subItem in Model.Where(p => p.Posicao == 3))
+                        {
+                            @if (sub.Id == subItem.Pai)
+                            {
+                                <ul>
+                                    <li><button><a id="@item.Id|@subItem.Pai|@subItem.Id" asp-area="@subItem.Area" asp-controller="@subItem.Controller" asp-action="@subItem.Action">@subItem.Nome</a></button></li>
+                                </ul>
+                            }
+
+                        }
+                    </li>
+                }
+            </ul>
+
+        </li>
+    }
+
+</ul>
+<script>
+    $(document).on('click', '.sideMenu.Alt > ul > li > ul > li > ul > li > button', function () {
+        loadingStuff(this);
+    });
+    $(document).on('click', '.changeMenuView', function () {
+        $('.sideMenu').toggleClass('Alt');
+        $('.sideMenu').toggleClass('Main');
+        $(this).toggleClass('active');
+    });
+
+    $(document).on('click', '.sideMenu.Main > ul > li > button', function () {
+        $(this).toggleClass('active');
+        $(this).next().slideToggle();
+    });
+
+    $(document).on('click', '.sideMenu.Main > ul > li > ul > li > button', function () {
+        $(this).toggleClass('active');
+        $(this).next().slideToggle();
+    });
+
+    $(document).on('click', '.sideMenu.Alt > ul > li > button', function () {
+        $(this).toggleClass('active');
+        //$(this).next().slideToggle();
+        $(this).next().animate({ width: 'toggle' });
+    });
+
+    $(document).on('click', '.sideMenu.Alt > ul > li > ul > li > button', function () {
+        $(this).toggleClass('active');
+        //$(this).next().slideToggle();
+        $(this).next().animate({ width: 'toggle' });
+    });
+
+    $(document).on('click', '.sideMenu > button.openMenu', function () {
+        $(this).parent().toggleClass('open');
+    });
+
+    $(document).on('click', '.sideMenu button a', function () {
+        let caminho = $(this).attr('id');
+        $('#breadcrumid').load("/Home/BreadCrumb?caminho=" + caminho);
+    });
+
+</script>
+
+

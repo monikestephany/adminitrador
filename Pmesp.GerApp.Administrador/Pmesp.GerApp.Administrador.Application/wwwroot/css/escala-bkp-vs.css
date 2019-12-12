@@ -1,0 +1,802 @@
+﻿@charset "utf-8";
+/* CSS Document */
+    
+body {
+	font-family: "Segoe UI", "Open Sans", "OpenSans-Regular",sans-serif !important;
+}
+
+.disabled {
+    opacity: .5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+    pointer-events: none;
+}
+
+.ui-error,
+.ui-error td {
+    border: 1px solid #F55;
+    background-color: #F77;
+}
+
+.ui-success,
+.ui-success td {
+    border: 1px solid #5D5;
+    background: #8E8;
+}
+
+.ui-warning,
+.ui-warning td {
+    border: 1px solid #EE5;
+    background-color: #EE8;
+}
+
+
+
+/* Botões de Radio/Checkbox */
+.radioBtn,
+.checkBtn {
+	background:url(../img/Radio-Checkbox-Buttons.png) no-repeat;	
+	cursor: pointer;
+	height: 26px;
+	padding-left: 10px;
+}	
+	.radioBtn input,
+	.checkBtn input {
+		cursor:pointer;
+		filter:alpha(opacity=0);
+		opacity:0;	
+	}
+	.radioBtn { background-position:-10px -12px }
+	.radioBtn.checked { background-position:-10px -48px }
+	.checkBtn { background-position:-10px -90px }
+	.checkBtn.checked { background-position:-10px -130px }
+
+
+/*  CSS BASE PARA CONTROLE DE LIST BOXES */
+.dualListBox {}
+.dualListBox-source,
+.dualListBox-target {
+    border: 1px solid #BABABA;
+    width: 246px;
+    height: 150px;
+    float: left;
+}
+.dualListBox-controls {
+    float: left;
+    margin: 0 17px;
+}
+.dualListBox-button {
+    width: 66px;
+    height: 32px;
+    display: block;
+    border: 0;
+    background-color: #3382a9;
+    background-image: url(../img/sprite-dualListBox.png);
+    background-repeat: no-repeat;
+}
+.dualListBox-button + .dualListBox-button { margin-top: 7px }
+.dualListBox-add { background-position: 17px 2px; }
+.dualListBox-addAll { background-position: 17px -28px; }
+.dualListBox-remove { background-position: 17px -56px; }
+.dualListBox-removeAll {background-position: 17px -86px; }
+
+
+
+.defaultBtn {
+	background: #3382aa;
+	border: 0;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 13px;
+	height: 32px;
+	width: 132px;
+}
+.defaultBtn:hover {
+	background: #111;
+}
+
+.clearfix,
+.clearfix:after {
+	clear:both;
+}
+.clearfix:after,
+.clearfix:before { 
+	content: '.';
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	font-size: 0;
+	line-height: 0;
+	width: 0;
+	height: 0;
+}
+
+.system-home {
+	margin-left: 35px;	
+}
+
+.system-title {
+	font-weight: lighter;
+	font-size: 32px;
+	color: #3382aa;
+	margin-top: 54px;
+	margin-left: 0;
+	margin-bottom: 40px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #006699;
+	width: 1002px;
+}
+
+.system-header {
+	background-color: #F8F8F8;
+	border-bottom: 1px solid #F2F1F1;
+	height: 74px;
+	padding-left: 20px;
+	width: 1048px;
+}
+
+.main-menu { 
+    margin-left:180px;
+    width: 623px;
+}
+	.main-menu-button {
+		width: 304px;
+		height: 106px;
+		border: 0;	
+		line-height: 155px;
+		font-size: 1em;
+		text-align: center;
+		background-color: #45afe5;
+		background-image: url('../img/sprite-escala.png');
+		background-repeat: no-repeat;
+		color: #FFF;
+		display: inline-block;
+		text-decoration:none;
+	}
+	.main-menu-button:hover { text-decoration:underline }
+
+	.main-menu-button.management { background-position: 94px -19px; }
+	.main-menu-button.planning {
+		background-color: #3382aa;
+		background-position: 90px -127px;
+		margin-left: 10px;
+	}
+	.main-menu-button.workplan { background-position: 0 -250px; }
+	.sub-nav .main-menu-button.workplan { background-position: -5px -1824px }
+	
+	.main-menu-button.holiday {
+        background-position: -34px -360px;
+        margin: 0 20px;
+        padding: 0 10px;
+    }
+	.sub-nav .main-menu-button.holiday { background-position: -33px -1934px }
+	
+	.main-menu-button.benefits { background-position: 15px -470px; }
+	.sub-nav .main-menu-button.benefits { background-position: 14px -2044px }
+	
+	.main-menu-button.schedules { background-position: -22px -584px; }
+	.sub-nav .main-menu-button.schedules { 
+		background-position: -28px -2154px;
+		margin-left:0 !important;
+		width: 70px !important;
+	}
+
+	.main-menu-button.relate-scale { background-position: -22px -699px }
+	.sub-nav .main-menu-button.relate-scale { background-position: -22px -2268px }
+	
+	.main-menu-button.extra-scale { background-position: -22px -1145px; }
+	.sub-nav .main-menu-button.extra-scale { background-position: -22px -2715px }
+	
+	.main-menu-button.extra-scale-period { background-position: -22px -1258px; }
+	.sub-nav .main-menu-button.extra-scale-period { background-position: -22px -2829px }
+	
+	.main-menu-button.relate-extra-scale { background-position: -22px -1377px; }
+	.sub-nav .main-menu-button.relate-extra-scale { background-position: -22px -2949px }
+	
+	.main-menu-button.dayoff-extra-scale { background-position: -22px -1501px; }
+	.sub-nav .main-menu-button.dayoff-extra-scale { background-position: -22px -3073px }
+
+	.main-menu-button.generate-scale { background-position: -22px -808px; }
+	.sub-nav .main-menu-button.generate-scale { background-position: -22px -2380px }
+
+	.main-menu-button.check-scale { background-position: -22px -917px; }
+	.sub-nav .main-menu-button.check-scale { background-position: -22px -2490px }
+
+	.main-menu-button.adjust-scale { background-position: -22px -1030px; }
+	.sub-nav .main-menu-button.adjust-scale { background-position: -24px -2602px }
+
+    .main-menu-button.availability { background-position: -22px -1610px; }
+    .sub-nav .main-menu-button.availability { background-position: -24px -3197px }
+
+    .main-menu-button.frequency { background-position: -22px -1720px; }
+    .sub-nav .main-menu-button.frequency { background-position: -24px -3307px }
+
+	.main-menu-button.selected {
+        color: #878787 !important;
+		opacity: .5;
+		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+		filter: alpha(opacity=50);
+		pointer-events: none;
+	}
+
+    .main-menu-button.selected.workplan { background-position: -3px -3408px }
+    .main-menu-button.selected.holiday { background-position: -32px -3518px }
+    .main-menu-button.selected.benefits { background-position: 10px -3628px }
+    .main-menu-button.selected.schedules { background-position: -29px -3738px }
+    .main-menu-button.selected.relate-scale { background-position: -24px -3852px }
+    .main-menu-button.selected.extra-scale { background-position: -24px -4299px }
+    .main-menu-button.selected.extra-scale-period { background-position: -24px -4413px; }
+    .main-menu-button.selected.relate-extra-scale { background-position: -24px -4533px; }
+    .main-menu-button.selected.dayoff-extra-scale { background-position: -24px -4657px; }
+    .main-menu-button.selected.generate-scale { background-position: -24px -3964px; }
+    .main-menu-button.selected.check-scale { background-position: -24px -4074px; }
+    .main-menu-button.selected.adjust-scale { background-position: -24px -4186px }
+    .main-menu-button.selected.availability { background-position: -24px -4787px; }
+    .main-menu-button.selected.frequency { background-position: -24px -4897px; }
+
+	.main-menu-items {
+		width: 852px;
+		background-color: #45afe5;
+		height: 90px;
+		padding-left: 150px;
+	}
+	.main-menu-items.planning {
+		background-color: #3382aa;
+		padding-left: 0;
+		width: 1002px;
+	}
+	.main-menu-items.management {
+		padding-left: 280px;
+		width: 770px !important;
+	}
+	.main-menu-items.sub-nav {
+		background-color: transparent;
+		border-bottom: 1px solid #069;
+		clear: both;
+		margin-left: 20px;
+		width: 1048px;
+	}
+	.main-menu-items .main-menu-button {
+		width: auto;
+		height: 100%;
+		line-height: 120px;
+		font-size: 14px;
+	}
+	.main-menu-items.planning .main-menu-button {
+        background-color: #3382aa;
+        font-size: 12px;
+        height: 32px;
+        line-height: 1em;
+        margin-left: 5px;
+        padding-top: 50px;
+        text-align: center;
+        vertical-align: top;
+        width: 82px;
+	}
+	.main-menu-items.sub-nav .main-menu-button {
+		background-color: transparent;
+		margin-left: 11px;
+		color: #3382AA;
+	}
+	
+.breadcrumb {
+	float: left;
+	line-height: 74px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+	.breadcrumb-item {
+		color: #525252;
+		display: inline-block;
+		font-size: 18px;
+		background: transparent;
+		float: none;
+		padding: 0 !important;
+	}
+	.breadcrumb-first {
+		font-size: 22px;
+		color: #3382aa;
+	}
+	.breadcrumb-item:before {
+		content: ">";
+		margin: 0 4px;
+	}
+	.breadcrumb-first:before {
+		content: none;
+		margin: 0;
+	}
+
+.shortcuts {
+	font-size: 14px;
+	float: right;
+	line-height: 74px;
+	margin: 0;
+	padding: 0;
+}
+	.shortcut-item {
+		display: inline-block;
+		padding-left: 30px;
+		margin-right: 4px;
+		background-position: -47px -5087px;
+		background-image: url('../img/sprite-escala.png');
+		background-repeat: no-repeat;
+	}
+	.shortcut-item.home-icon { background-position-y: -5023px; }
+		.shortcut-item a { 
+			color: #000; 
+			text-decoration: none;
+		}
+		.shortcut-item a:hover { text-decoration: underline }
+
+.main-content {
+	margin-left: 20px;
+	margin-top: 25px;
+	margin-bottom: 80px;	
+	width: 1048px;
+}
+
+.content-box {
+	border: 1px solid #d4d4d4;
+	display: inline-block;
+	float: left;
+	min-height: 65px;
+	padding: 15px 25px;
+	width: 998px;
+}
+
+.schedule-box,
+.holiday-box {
+	width: 628px;
+	margin-right:18px;
+	padding-top: 40px;
+	height: 67px;
+	overflow:hidden;
+}
+.scheduleSelected .schedule-box,
+.scheduleAddNew .schedule-box {
+	width: 998px;
+	height: auto;
+	margin-right: 0;
+}	
+.helper-box {
+	width: 294px;
+	text-align: center;
+	padding-top: 40px;
+}
+.scheduleSelected .helper-box,
+.scheduleAddNew .helper-box { display: none; }
+
+.schedule-resultSet {
+    margin-top: 15px;
+    display: none;
+}
+.scheduleSelected .schedule-resultSet { display: block; }
+.schedule-resultSet .colHorarioEntrada,
+.schedule-resultSet .colHorarioSaida { width: 120px; }
+.schedule-resultSet .colFolgaPrimeiroDia,
+.schedule-resultSet .colFolgaSegundoDia { width: 140px; }
+
+.scheduleSelected .extraData { display: none; }
+
+
+.holiday-box,
+.holiday-helper { width: 463px }
+
+.helper-text { font-size: 13px; }
+
+.addbutton {
+	background-color: transparent;
+	border: 0;
+	color: #069;
+	display: block;
+	line-height: 24px;
+	margin: 10px auto;
+	padding-left: 30px;
+	background-position: -53px -5174px;
+	background-image: url('../img/sprite-escala.png');
+	background-repeat: no-repeat;
+}
+
+.radioGroup { 
+	font-size: 16px;
+	margin-top: 10px;
+}
+	.radioGroup .radioBtn { color: #069; }
+	.radioGroup .radioBtn + .radioBtn {
+		margin-left: 15px;
+	}
+
+.extraData { margin-top: 30px }	
+
+.formField {
+	display: block;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	padding: 5px 8px;
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.lblOpm,
+.lblNatureza,
+.lblRE,
+.lblViatura,
+.lblFuncao {
+	float: left;
+	width: 30px;
+}
+.lblDescr,
+.lblEntrada,
+.lblData,
+.lblDataInicial,
+.lblDataFinal,
+.lblHorarioEntrada,
+.lblHorarioSaida,
+.lblPrelecao,
+.lblHorarioEquipe,
+.lblPolicial,
+.lblEscalaExtra,
+.lblNome {
+	float: left;
+	margin-left: 30px; 
+	width: 460px;
+}
+.lblEntrada,
+.lblData,
+.lblDataInicial,
+.lblDataFinal,
+.lblPrelecao { width:118px }
+.lblRE { width:136px }
+.lblHorarioEquipe,
+.lblEscalaExtra { width:342px; }
+.lblNome { width:506px }
+
+.lblAgrupamento {
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.content-box .btnGroup {
+	float: right;
+	height: 32px;
+	margin-right: 20px;
+	margin-top: 22px;
+	text-align: right;
+	width: 280px;
+}
+.content-box .defaultBtn + .defaultBtn {
+	margin-left: 11px;
+}
+
+.showEditBox .relate-scale-main { display: none }
+
+.relate-scale-box .lblNatureza {
+    float: left;
+    margin-left: 30px;
+    width: 340px;
+}
+.relate-scale-box .lblHorarioEntrada { 
+    margin: 0;
+}
+.relate-scale-box .lblHorarioEntrada,
+.relate-scale-box .lblHorarioSaida { width: 136px; }
+
+.relate-scale-box .btnPesquisar { 
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.relate-scale-resultSet { 
+    margin-top: 15px;
+    display: none;
+}
+.showResultSet .relate-scale-resultSet { display:block }
+.relate-scale-resultSet .tabelaPadrao { width: 100% }
+.relate-scale-resultSet .checkBtn {
+    display: block;
+    margin: 5px auto 0;
+    width: 10px;
+}
+ .btnSelecionarViatura,
+ .btnSelecionarFuncao {
+    float: left;
+    margin-right: 5px;
+    background:transparent url('../img/sprite-escala.png') -53px -5227px no-repeat;
+    border: 0;
+    width: 24px;
+    height: 20px;
+}
+ .btnSelecionarViatura {
+    background-position: -52px -5268px;
+}
+.relate-scale-resultSet .lblViatura,
+.relate-scale-resultSet .lblFuncao { width: auto; }
+
+
+.relate-scale-edit-box {
+    position: relative;
+    display: none;
+}
+.showEditBox .relate-scale-edit-box { display: block }
+.relate-scale-edit-box .photo {
+    position: absolute;
+    left: 25px;
+}
+.relate-scale-edit-box .lblOpm {
+    margin-left: 80px;
+    margin-bottom: 15px;
+}
+.relate-scale-edit-box .lblPolicial {
+    margin-left: 0;
+    width: 246px;
+}
+.relate-scale-edit-box .lblFuncao {
+    margin-left: 22px;
+    width: 206px;
+}
+.lblViatura {
+    margin-left: 22px;
+    width: 143px;
+}
+.relate-scale-edit-box .lblEscalaExtra {
+    width: 294px;
+}
+.relate-scale-edit-box .lblHorarioEquipe {
+    margin-left: 0;
+    width: 246px;
+}
+.relate-scale-edit-box .lblHorarioEntrada,
+.relate-scale-edit-box .lblHorarioSaida {
+    margin-left: 22px;
+    width: 125px;
+}
+.relate-scale-edit-box .lblNatureza {
+    margin-left: 22px;
+}
+.relate-scale-edit-box .btnGroup {
+    margin-right: 23px;
+    margin-top: -32px;
+}
+
+    
+.relate-scale-extra-add-box { 
+    position: relative;
+    display: none;
+}
+.addRelateExtraScale .relate-scale-extra-box { display: none; }
+.addRelateExtraScale .relate-scale-extra-add-box { display: block; }
+
+.relate-scale-extra-add-box .photo {
+    right: 95px;
+    top: 20px;
+    position: absolute;
+}
+.relate-scale-extra-add-box .lblEscalaExtra { 
+    margin-left: 0;
+    width: 392px;
+}
+.relate-scale-extra-add-box .lblNatureza { 
+    width: 228px;
+    margin-left: 26px;
+}
+.relate-scale-extra-add-box .lblPolicial { width: 244px; }
+.lblViatura { 
+    width: 144px;
+    margin-left: 0;
+}
+.relate-scale-extra-add-box .lblFuncao {
+    width: 204px;
+    margin-left: 41px;
+}
+.relate-scale-extra-add-box .btnGroup {
+    margin-right: 70px;
+}
+
+.relate-scale-extra-box .btnGroup,
+.extra-scale-period-box .btnGroup {
+	margin-right: 18px;
+	margin-top: 15px;	
+}
+
+.extra-scale-box {
+	margin-right: 18px;
+	width: 628px;	
+}
+.extra-scale-box .lblOpm,
+.extra-scale-box .lblEscalaExtra { width:296px }
+.extra-scale-box .btnGroup {
+	width: 400px;
+	margin-right: 0;
+	margin-top: 0;
+	display: inline-block;
+}	
+	.extra-scale-box .btnGroup .helper-text {
+		text-align: center;
+		margin-top: -2px;
+		float: right;
+		width: 223px;
+	}
+.extra-scale-helper { height: 74px }
+
+.holidayAddSelected .holiday-box,
+.holidayAddSelected .holiday-helper { display: none }
+
+.holiday-add-box { display:none }
+.holidayAddSelected .holiday-add-box { display:block }
+.holiday-add-box .lblData { margin: 0; }
+.holiday-add-box .lblDescr { width: 470px; }
+.holiday-add-box .radioAbrangencia {
+	display: inline-block;
+	margin-left: 60px;	
+}
+.holiday-add-box .radioTipoFeriado {
+	display: inline-block;
+	margin-top: 20px;
+}
+.holiday-add-box .btnGroup { 
+	margin-top: 40px;
+	margin-right: 0;
+}
+
+.workplan-box {
+	width: 700px;
+	margin: 0 auto;	
+}
+.workplan-box .lblDescr {
+    width: 290px;
+	margin-left: 0;
+}
+.workplan-box .radioTipoRegime {
+	display: inline-block;	
+	margin-left: 20px;
+}	
+.workplan-box .btnGroup {
+	margin-right: 0;
+}
+
+.benefits-box th,
+.benefits-box td {
+	font-size:14px;
+	width: 60px;
+}
+.benefits-box .tabelaPadrao-mainColumn { width: 490px }
+.benefits-box .paginacao {
+	float: right;
+	margin-top: 15px;
+}
+.benefits-box .paginacao .pages,
+.benefits-box .paginacao .record {
+	font-size: 14px;
+	vertical-align: middle;
+	line-height: 1.1em;
+	padding: 6px;
+	border: 1px solid #BABABA;
+	height: 32px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.benefits-box .paginacao .next { margin-right:0 }
+
+.check-scale-box .btnPesquisar,
+.generate-scale-box .btnPesquisar,
+.dayoff-extra-scale-box .btnPesquisar {
+    margin-left: 28px;
+    margin-top: 20px;
+}
+
+.adjust-scale-box {
+	width: 530px;
+	margin: 0 auto;
+	position: relative;
+}
+	.adjust-scale-box .photo {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.adjust-scale-box .lblDataInicial { 
+		margin-left: 0;
+		width: 89px;
+	}
+	.adjust-scale-box .lblPolicial { width: 245px; }
+	.adjust-scale-box .btnPesquisar { margin-top: 20px }
+	.adjust-scale-box .lblPolicial,
+	.adjust-scale-box .btnPesquisar { margin-left: 28px }
+
+.adjust-scale-resultSet { 
+    margin-top: 15px;
+    display: none;
+}
+.showResultSet .adjust-scale-resultSet { display:block }
+.adjust-scale-resultSet .tabelaPadrao { width: 100% }
+.adjust-scale-resultSet .colHorario { width: 204px }
+.adjust-scale-resultSet .colFunction { width: 250px }
+.adjust-scale-resultSet .colCar,
+.adjust-scale-resultSet .colHoraIni { width: 110px }
+.adjust-scale-resultSet .colGroup { width: 146px }
+.adjust-scale-resultSet .colHoraFinal {}
+.adjust-scale-resultSet .formField { margin: 0 auto; }
+.adjust-scale-resultSet .txtAgrupamento { height: 30px; }
+
+.colMeioExpediente {
+   min-width: 400px;
+}
+.colExcluir {
+    width: 35px;
+}
+
+/*Classe para definir as datas dentro do Popup */
+.popupGerarEscala li {
+    float:left;
+    margin-right:30px;
+    list-style: none;
+}
+
+#ConsultaPdfDiv .tabelaPadrao {
+    width:100%;
+}
+
+
+.viaturaDialog .lblViatura {
+    width: 250px;
+    margin-right: 30px;
+}
+.viaturaDialog .lblPrefixo,
+.viaturaDialog .lblPlaca {
+    width: 230px;
+    float: left;
+    display: none;
+}
+.viaturaDialog .btnGroup,
+.funcaoDialog .btnGroup { text-align: right }
+
+.imgSubstituir {
+	background-color: transparent;
+	border: 0;
+	color: #069;
+	display: block;	
+	background-image: url('../img/icones/substituir_27x27.png');
+	background-repeat: no-repeat;
+    width: 28px;
+    height: 20px;     
+}
+
+.imgDeletar {
+	background-color: transparent;
+	border: 0;
+	color: #069;
+	display: block;
+	background-image: url('../img/icones/delete_16x16.png');
+	background-repeat: no-repeat;
+    width: 28px;
+    height: 20px;     
+}
+
+
+.formRegimeTrabalho {
+    width: 1048px;
+}
+
+.relate-scale .salvar {
+    width:auto;
+    padding:0 15px;
+}
+.relate-scale .boxCheckEstudante {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+.relate-scale .boxQtdHoras { width: 145px }
+
+#divGridDePlanejamentoDoPM {
+    width: 910px;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+.margin-default {
+    margin: 7px 0 3px;
+}

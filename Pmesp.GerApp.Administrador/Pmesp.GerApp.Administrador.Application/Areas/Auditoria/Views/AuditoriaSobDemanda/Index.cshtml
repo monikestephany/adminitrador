@@ -1,0 +1,39 @@
+﻿@model SobDemanda
+@{
+    Layout = "_LayoutBoot";
+    ViewData["Title"] = "Auditoria Sob Demanda";
+}
+    <div class="content-box">
+        <h2 class="col-xs-12">Auditoria Inteligente</h2>
+        <form asp-action="Pesquisar">
+        <div class="searchFilters">
+            <fieldset class="fieldSet">
+                <legend>Periodo de</legend>
+                <span class="inBetween">Periodo de</span>
+
+                <div class="inputText dateFieldini">
+                    <input asp-for="DataInicio"  type="text" placeholder="__/__/____" class="datepicker" required autocomplete="off" />
+   
+                    <label>Ínicio</label>
+                    <div class="helper">
+                        <span>Mensagem</span>
+                        <span>0/20</span>
+                    </div>
+                </div>
+                <span class="inBetween"> A </span>
+                <div class="inputText dateFieldfim">
+                    <input asp-for="DataFim"  type="text" placeholder="__/__/____" class="datepicker" required autocomplete="off" />
+                    <label>Termino</label>
+                    <div class="helper">
+                        <span>Mensagem</span>
+                        <span>0/20</span>
+                    </div>
+                </div>
+            </fieldset>
+            <button class="formBTN">
+                Pesquisar
+            </button>
+        </div>
+        </form>
+    </div>
+

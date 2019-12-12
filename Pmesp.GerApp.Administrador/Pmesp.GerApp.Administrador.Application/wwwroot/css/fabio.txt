@@ -1,0 +1,67 @@
+22/02/2019
+12:02:18: Lucas Garcia Lopes Inocente: Bom dia Fabio, eu dei uma atualizada ali no elaborar escala pra ficar um pouco mais claro o fluxo 
+12:02:24: Lucas Garcia Lopes Inocente: ainda to mechendo 
+12:02:28: Lucas Garcia Lopes Inocente: http://vmwsiades12.cmdo.policiamilitar.sp.gov.br/escala.prototipo/elaborar_escala.html 
+12:02:29: Lucas Garcia Lopes Inocente: mas ta la 
+12:02:33: Lucas Garcia Lopes Inocente: a tela ta um pouco poluida ainda 
+14:14:15: Fabio Cezario de Oliveira:  
+14:14:19: Fabio Cezario de Oliveira: hahaha daora 
+14:20:52: Lucas Garcia Lopes Inocente: aHUAhu 
+14:20:57: Lucas Garcia Lopes Inocente: a culpa é dos requisitos que não definiu um limite 
+14:21:39: Fabio Cezario de Oliveira: hahaha 
+14:22:14: Fabio Cezario de Oliveira: tem algumas alterações para fazer na tela de configuração 
+14:22:49: Fabio Cezario de Oliveira: coisa mais simples que a elaboração de escala  
+14:22:50: Fabio Cezario de Oliveira: kk 
+14:22:56: Fabio Cezario de Oliveira: O 
+14:23:11: Lucas Garcia Lopes Inocente: mandaí 
+14:23:21: Fabio Cezario de Oliveira: Ou, os caras tão pensando em te trazer pra cá uma vez por semana 
+14:23:26: Fabio Cezario de Oliveira: é ruim pra vc ? 
+14:23:41: Fabio Cezario de Oliveira: desde que te liberem é claro  
+14:23:56: Lucas Garcia Lopes Inocente: é ótimo 
+14:24:03: Lucas Garcia Lopes Inocente: por mim seria até 2x 
+14:24:11: Fabio Cezario de Oliveira: por nós tbm  
+14:24:12: Fabio Cezario de Oliveira: kkk 
+14:24:12: Lucas Garcia Lopes Inocente: segunda e sexta, pra começar a semana as idéias e sexta chegar com elas executadas 
+14:24:31: Fabio Cezario de Oliveira: eu tinha sugerido segunda e quinta  
+14:24:49: Fabio Cezario de Oliveira: pros caras não ficarem te segunrando até 20Hrs de sexta feira  
+14:24:50: Fabio Cezario de Oliveira: kkkk 
+14:25:10: Fabio Cezario de Oliveira: nós pedimos duas, mas acho q não vão liberar kk 
+14:25:55: Fabio Cezario de Oliveira: os médicos recomendam três vezes por semana, mas duas já ta valendo kkkk melhor do que ficar na mão né  
+14:25:56: Fabio Cezario de Oliveira: kkkkk 
+14:28:27: Lucas Garcia Lopes Inocente: ahUHAu 
+14:28:30: Lucas Garcia Lopes Inocente: pode ser segunda e quinta 
+14:28:33: Lucas Garcia Lopes Inocente: né 
+14:28:59: Fabio Cezario de Oliveira: kkkkk 
+14:29:01: Fabio Cezario de Oliveira: :-D 
+14:29:10: Fabio Cezario de Oliveira: bom, quando eles falarem  
+14:29:18: Fabio Cezario de Oliveira: ai vc sugere q dois dias seria melhor  
+14:29:20: Fabio Cezario de Oliveira: kkkk 
+14:30:09: Lucas Garcia Lopes Inocente: ahUHAU 
+14:30:12: Lucas Garcia Lopes Inocente: Fechou 
+14:31:00: Fabio Cezario de Oliveira: 8-) 
+14:39:59: Fabio Cezario de Oliveira: Alterações na tela de Configuração de Escala 
+14:39:59: Fabio Cezario de Oliveira:   
+14:39:59: Fabio Cezario de Oliveira:   
+14:40:01: Fabio Cezario de Oliveira: Configuração para escala
+	Arquivo: template_escala.html
+
+Alterações:
+
+	1.Dados do template
+
+		1.1 Campo Descrição da unidade organizacional
+			Criar uma lista fixa, que será populada com as unidades selecionadas. Deverá ser considerado que poderá haver muitos registros, verificar a necessidade de uma barra de rolagem ou opção de visualizar que ao ser acionada exibirá todas as unidades.
+
+		1.2 Local da revista
+			Deverá ter uma opção para replicar o local da unidade. Caso existam mais de uma unidade, deverá exibir uma opção para permitir selecionar de qual unidade será replicado o local da revista. Deverá permitir também que seja preenchido qualquer informação no campo.
+
+	2.Tipo de Regime
+
+		2.1 Preleção: Tempo previsto para passar aos PM que estarão de serviço as informações/instruções da execução de uma escala. Os valores desse campo devem ser de 5 minutos até 30 minutos, com um intervalo de 5 minutos.
+
+		2.2 Trabalha no feriado: Indica se irá utilizar o cadastro de feriado para geração de escala Nota: Apresentado apenas para regime de trabalho 5x2 e 6x1
+
+		2.3 Quantidade de pessoas para a escala: Terá um campo para informar a quantidade de efetivo necessário para a escala, para que no momento de elaboração seja criado um controle do efetivo necessário.
+
+		2.4Criar configuração por Posto/Graduação: Deverá permitir qual Posto/Graduação irá compor a escala, para que no momento de elaboração seja criado uma limitação por patente.
+ 

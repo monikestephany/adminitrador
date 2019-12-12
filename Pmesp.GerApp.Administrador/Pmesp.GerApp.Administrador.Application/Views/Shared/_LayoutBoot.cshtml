@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerenciamento de Usuários de Aplicativos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/icon-font.min.css" type="text/css">
+    <link href="~/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/colreorder/1.5.1/css/colReorder.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css">
+    <link href="~/css/jqueryui/jquery-ui-1.10.1.custom.min.css" rel="stylesheet">
+    <link href="~/css/timepicki.css" rel="stylesheet">
+    <link href="~/css/slimselect.min.css" rel="stylesheet">
+    <link href="~/css/padrao.css" rel="stylesheet">
+    <link href="~/css/escala.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/ohx6qtp.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300" rel="stylesheet" type="text/css">
+    <style>
+        * {
+            font-family: alternate-gothic-no-3-d, sans-serif;
+        }
+    </style>
+</head>
+<script>
+    function loadingStuff(element) {
+        element.toggleClass('loading');
+        if (element.hasClass('loading')) {
+            element.append('<div class="load-bg"><div class="ico-load"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>');
+        } else {
+            element.children('.load-bg').remove();
+        }
+    };
+</script>
+<body role="document" style="zoom: 1;" class="loading">
+
+    <div class="load-bg"><div class="ico-load"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+    <header class="system-header">
+        <div class="container no-gutter">
+            <div class="logo"></div>
+            <div class="title">Gerenciamento de usuários de aplicativos</div>
+            <ul class="shortcuts">
+                <div class="profile_details">
+                    <ul>
+                        <li class="dropdown profile_details_drop">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <div class="profile_img">
+                                    <span style="background:url(../lib/image/img-pm-test-min.jpg) no-repeat center"> </span>
+                                    <div class="user-name">
+                                        <p>CB PM<span class="block">Almeida</span></p>
+                                    </div>
+                                    <i class="lnr lnr-chevron-down"></i>
+                                    <i class="lnr lnr-chevron-up"></i>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu drp-mnu">
+                                <li> <a href="sign-up.html"><i class="fa fa-sign-out"></i> Sair</a> </li>
+                            </ul>
+                        </li>
+                        <div class="clearfix"> </div>
+                    </ul>
+                </div>
+                <li class="notification">
+                    <div class="notification-button">
+                        <img src="~/lib/image/notificacao.png" title="Notificações">
+                        <span class="badge">99</span>
+                    </div>
+                    <div class="notification-details">
+                        <div class="notification-container">
+                        </div>
+                        <a href="#" class="notification-more">Mais notificações</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <script src="~/js/jquery-1.9.0.min.js"></script>
+    <script src="~/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="~/js/jquery.activeTable.js"></script>
+    <script src="~/js/timepicki.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.accordion.js"></script>
+    <script src="~/js/jquery.pagecontrol.js"></script>
+    <script src="~/js/slimselect.min.js" type="text/javascript"></script>
+    <script src="~/js/escala.js" type="text/javascript"></script>
+    <script src="~/js/elaborarEscalaPrototipo.js" type="text/javascript"></script>
+    <div class="main-content container" id="main-content">
+        <div class="breadCrumb" id="breadcrumid">
+            @Url.Action("BreadCrumb")
+        </div>
+        <nav class="sideMenu Main" id="sideMenu"></nav>
+        @RenderBody()
+    </div>
+
+
+    <script>
+        @RenderSection("Scripts", required: false)
+        $('.items a').on('click', function () {
+            var $this = $(this),
+                $bc = $('<div class="item"></div>');
+
+            $this.parents('li').each(function (n, li) {
+                var $a = $(li).children('a').clone();
+                $bc.prepend(' / ', $a);
+            });
+            $('.breadCrumb').html($bc.prepend('<a href="#home">Home</a>'));
+
+            return false;
+        })
+        //loadingStuff($('body'));
+        $(window).on('load', function () {
+            loadingStuff($('body'));
+        });
+
+        $(document).on('click', '.formBTN', function () {
+            loadingStuff($('body'));
+        });
+        $(document).on('click', 'button.ACT', function () {
+            loadingStuff($('body'));
+        });
+        $(document).on('click', '.btnDetalhes button', function () {
+            loadingStuff($('body'));
+        });
+
+
+        $(document).on('change', '.inputText.typeField > select', function () {
+            var powa = $(this).children('option:selected').val();
+            switch (powa) {
+                case "0":
+                    $('.inputText.docField > label').text('vazio');
+                    $('.inputText.docField').hide();
+                    $('.formBTN').hide();
+                    $('.fieldSet').hide();
+                    break;
+                case "1": // Arma
+                    $('.inputText.docField > label').text('Nº');
+                    break;
+                case "2": // Veiculo
+                    $('.inputText.docField > label').text('Placa');
+                    break;
+                case "3": // Pessoa
+                    $('.inputText.docField > label').text('CPF/RG');
+                    break;
+                case "4": // Policial
+                    $('.inputText.docField > label').text('RE');
+                    break;
+                case "5": //
+                    $('.inputText.docField > label').text('');
+                    break;
+                case "6": // IMEI
+                    $('.inputText.docField > label').text('Imei');
+                    break;
+                case "7": // Bicicleta
+                    $('.inputText.docField > label').text('Série');
+                    break;
+            };
+            //$('.inputText.docField > label').text(powa);
+            //$('.inputText.docField').show();
+            //$('.fieldset').show();
+            if (powa > 0) {
+                $('.inputText.docField').show();
+                $('.formBTN').show();
+                $('.fieldSet').show();
+            }
+        });
+
+        $(document).ready(function () {
+            $('#sideMenu').load("/Home/Menu");     
+         
+            $('.datepicker').datepicker();
+            if ($('.inputText.typeField > select').length >= 1) {
+                if ($('.inputText.typeField > select').children(':selected').val() == "0") {
+                    $('.inputText.docField').hide();
+                    $('.formBTN').hide();
+                    $('.fieldSet').hide();
+                }
+            }
+
+
+        });
+        $(document).on('keyup', '.inputText input', function () {
+            if ($(this).val() == "erro") {
+                $(this).parent().addClass('err');
+            } else {
+                $(this).parent().removeClass('err');
+            }
+        });
+
+    </script>
+    </div>
+</body>
+</html>

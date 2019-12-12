@@ -1,0 +1,277 @@
+* {
+	margin:0px;
+	padding:0px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1.0em;
+}
+body {
+	margin:0px 5px 0px 5px;
+	padding-left:5px;
+	background-color:#FCFCF9;
+	color:#333333;
+	font-size:0.72em;
+}
+img {
+	vertical-align:middle;
+	border:none;
+}
+dl, dt, dd, ul, li {
+	list-style-type: none;
+}
+
+
+#conteudo {
+	margin-top:7px;
+	width:715px;
+	position:absolute;
+	background-color:#FCFCF9;
+}
+
+h2 {
+	padding:3px 0px 7px 0px;
+	border-bottom:1px dotted #CC6633;
+	font-family:'Trebush MS', Tahoma, Sans-serif; 
+	color:#505C70; 
+	font-size:1.9em;
+	font-weight:normal;
+}
+
+h3 {
+	padding:6px 0px 7px 0px;
+	border-bottom:1px dotted #CC6633;
+	font-family:'Trebush MS', Tahoma, Sans-serif; 
+	color:#505C70; 
+	font-size:22px;
+	font-weight:normal;
+	margin-bottom:13px;
+}
+
+h3 span a:link,h2 span a:visited, h2 span a:hover,h2 span a:active {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight:normal;
+	
+}
+h3 img {
+	vertical-align:bottom;
+	margin-left:50px;
+}
+/* ------------------------------------------------------------- */
+/* Link padr�o */
+
+a:link {
+	color: #0065CA;
+	text-decoration:none;
+}
+a:hover {
+	color: #BC6243;
+	text-decoration:none;
+}
+a:active {
+	color: #0065CA;
+	text-decoration:none;
+}
+a:visited {
+	color: #0065CA;
+	text-decoration:none;
+}
+
+/* ------------------------------------------------------------- */
+table {
+	border-collapse: collapse;
+	width: 100%;
+	clear:both;
+	color:#333333;
+	font-size:0.9em;
+}
+.central {
+	width:640px;
+	padding:5px;
+	background-color:#E7EAED;
+}
+.central td {
+	padding-left:5px;
+	padding-right:5px;
+}
+th {
+	color:#f9f9f9;
+	text-align:left;
+}
+td {
+	border-top: 1px solid #CCC;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	vertical-align:top;
+	padding-top:5px;
+}
+
+/* ------------------------------------------------------------- */
+/* Come�a a inserir estilos na primeira c�lula thead */
+
+thead tr th {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;
+	background-color:#fcfcf9;
+	color:#000;
+	line-height:25px;
+	height:25px;
+}
+thead tr td {
+	background-color:#C0D1DE;
+	color:#333333;
+	height:23px;
+	line-height:23px;
+	font-weight:bold;
+	border-top:0;
+	padding:3px 0px 0px 5px;
+	border-bottom:1px solid #A8BFD0;
+}
+thead tr th a:link,
+thead tr th a:hover,
+thead tr th a:active,
+thead tr th a:visited {
+	color:#FFFFFF;
+	text-decoration:none;
+}
+thead tr th.central {
+	text-align:center;
+}
+thead tr th.semespaco {
+	padding-left:0px;
+}
+.hv {
+	background-color: #E3E3D6;
+	cursor: hand;
+	height: 20;
+	padding-left: 5; 
+		    
+}
+
+/* Come�a a inserir estilos nas c�lulas tbody -------------------- */
+
+tbody tr {
+	height:25px;
+	color: #333333;
+}
+
+tbody tr td.sim {
+	background: #DEDEDE;
+}
+tbody tr td.nao {
+	background: #FFFFFF;
+}
+tbody tr td.central {
+	text-align:center;
+}
+tbody tr td img.espaco {
+	margin-right:10px;
+	margin-left:5px;
+	vertical-align:middle;
+}
+tbody table tr td {
+	border=0;
+}
+tbody table tr td img {
+	padding-left:5px;
+	display:none;
+}
+/* Come�a a inserir estilos nas c�lulas tfoot -------------------- */
+
+tfoot tr {
+	background-color:#698FA3;
+	height:7px;
+}
+
+#email {
+	width:530px;
+	font-size:1.0em;
+}
+
+#email table {
+	width:520px;
+}
+#email table tr td,
+#email table tr {
+	border:0px;
+	height:16px;
+	line-height:16px;
+}
+#email input {
+	border:1px solid #999999;
+	font-size: 11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+#email div {
+	margin:0px;
+}
+.botao {
+	margin:0px 5px 5px 0px;
+	width:80px;
+	height:22px;
+	line-height:16px;
+	cursor:pointer;
+	text-align:center;
+	border-top:1px solid #CCCCCC;
+	border-right:2px solid #CCCCCC;
+	border-bottom:2px solid #CCCCCC;
+	border-left:1px solid #CCCCCC;
+	background-color:#DCE1E4;
+	color:#707989;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+.semborda {
+	border:0;
+	background-color:#E7EAED;
+}
+
+/* Define mouse over */
+.MenuOut{
+background-color:initial !important;
+}
+
+.styleMenuOver{
+background-color:#b5d1dd !important;
+color:#000;
+
+}
+
+.tbl-new tbody tr{ 
+	transition:.5s;}
+.tbl-new tr th{line-height:30px; background-color:none;}
+.tbl-new tbody tr td.semborda table td{   font-size:12px; padding:5px; border:none; border: 0px solid #7baad7;}
+.tbl-new tbody tr td.tbl-tit table td{  font-weight:bold; font-size:12px; padding:5px; border:none; border: 0px solid #7baad7;}
+.tbl-new tbody tr td.tbl-tit{background-color:#779db2 !important; color:#FFF !important;}
+.tbl-new tbody tr td.tbl-tit table td{color:#FFF !important;}
+.tbl-new tbody tr td.semborda:nth-child(odd){   background-color:#eaeaea;}
+.tbl-new tbody tr td.semborda:nth-child(even){   background-color:#FFF;}
+.tbl-new tbody tr td.semborda table:hover td{font-size:12px; BORDER:0PX SOLID #FFF; transition:;}
+.tbl-new tbody tr td.tbl-tit table:hover td{font-size:12px; BORDER:0PX SOLID #FFF; transition:;}
+.tbl-new tbody tr > td.semborda{
+	background-color: #7baad7;
+    padding: 0px;
+	height:auto;
+    box-sizing: border-box;
+    width: 100%;
+    display: inline-block;
+	border-bottom:1px solid #ccc;
+	
+}
+.tbl-new tbody tr > td.tbl-tit{
+	background-color: #7baad7;
+    padding: 0px;
+	height:auto;
+    box-sizing: border-box;
+    width: 100%;
+    display: inline-block;
+	border-bottom:1px solid #ccc;
+	
+}
+.bsc-tbl{
+	    float: left;
+    margin: 0px 0px 10px 0px;
+    font-size: 15px;
+    border: 1px solid #cccccc;
+    padding: 5px 5px;
+}
+tbody tr{height:auto !important;}
+
